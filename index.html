@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Film Portfolio</title>
+<title>Jonte Jesper Willert</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -13,9 +13,18 @@
         background: #050505;
         color: #e6e6e6;
         font-family: "Inter", sans-serif;
+        overflow-x: hidden;
     }
 
-    /* NAV */
+    .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.06;
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+        z-index: 999;
+    }
+
     .nav {
         position: fixed;
         top: 0;
@@ -36,11 +45,8 @@
         letter-spacing: 0.2em;
     }
 
-    .nav a:hover {
-        color: #fff;
-    }
+    .nav a:hover { color: #fff; }
 
-    /* HERO */
     .hero {
         height: 100vh;
         display: flex;
@@ -52,20 +58,19 @@
     }
 
     .hero h1 {
-        font-size: 3rem;
-        letter-spacing: 0.4em;
+        font-size: 2.8rem;
+        letter-spacing: 0.25em;
         font-weight: 300;
         margin: 0;
     }
 
     .hero p {
         margin-top: 20px;
-        font-weight: 300;
-        letter-spacing: 0.2em;
         opacity: 0.6;
+        letter-spacing: 0.2em;
+        font-size: 0.9rem;
     }
 
-    /* SECTIONS */
     .section {
         padding: 120px 20px;
         max-width: 900px;
@@ -79,67 +84,65 @@
         opacity: 0.6;
     }
 
-    /* PROJECTS */
-    .project {
-        margin-bottom: 60px;
-        padding-bottom: 20px;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .block {
         border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding-bottom: 20px;
     }
 
-    .project h2 {
-        margin: 0;
+    h2 {
         font-weight: 400;
-        letter-spacing: 0.05em;
+        margin: 0 0 10px 0;
     }
 
-    .project p {
-        opacity: 0.6;
-        line-height: 1.6;
-    }
-
-    .tag {
-        font-size: 11px;
-        opacity: 0.4;
-        margin-top: 8px;
-    }
-
-    /* CONTACT */
-    .contact {
-        text-align: center;
+    p, li {
         opacity: 0.7;
-        font-size: 0.9rem;
+        line-height: 1.6;
+        font-size: 0.95rem;
     }
 
-    a {
-        color: #fff;
-        text-decoration: none;
+    ul {
+        padding-left: 18px;
     }
+
+    .project {
+        margin-bottom: 40px;
+    }
+
+    a { color: #fff; text-decoration: none; }
 
 </style>
 </head>
 
 <body>
 
+<div class="grain"></div>
+
 <!-- NAV -->
 <div class="nav">
-    <a href="#home">HOME</a>
     <a href="#about">ABOUT</a>
     <a href="#projects">PROJEKTE</a>
+    <a href="#cv">CV</a>
     <a href="#contact">CONTACT</a>
 </div>
 
 <!-- HERO -->
-<div class="hero" id="home">
-    <h1>FILM PORTFOLIO</h1>
-    <p>CINEMATIC STORYTELLING / PRODUCING / DIRECTING</p>
+<div class="hero">
+    <h1>JONTE JESPER WILLERT</h1>
+    <p>FILMMAKER / CINEMATOGRAPHY / STORYTELLING</p>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
     <div class="title">ABOUT</div>
     <p>
-        Ich bin angehender Filmemacher mit Fokus auf visuelles Storytelling,
-        Produktion und atmosphärische Bildsprache.
+        Filmemacher mit Fokus auf visuelles Storytelling, Kameraarbeit, Lichtsetzung und Postproduktion.
+        Arbeiten bewegen sich zwischen narrativem Film, Musikvideo und experimenteller Bildgestaltung.
     </p>
 </div>
 
@@ -148,19 +151,78 @@
     <div class="title">PROJEKTE</div>
 
     <div class="project">
-        <h2>BERRY SEA</h2>
-        <div class="tag">SHORT FILM / CONCEPT</div>
-        <p>
-            Ein atmosphärisches Filmprojekt mit Fokus auf Farbe, Stimmung und emotionale Bildsprache.
-        </p>
+        <h2>BERRY TEA</h2>
+        <p>Kurzfilm · Regie, Kamera, Licht, Schnitt, Produktion</p>
     </div>
 
+    <div class="project">
+        <h2>HALLUZINATION</h2>
+        <p>Kurzfilm · Regie, Kamera, Schnitt</p>
+    </div>
+
+    <div class="project">
+        <h2>WEITERE ARBEITEN</h2>
+        <p>
+            Werbefilm Gymnasium Altenholz · Musikvideo- & Konzertproduktionen · Start-up Imagevideos (u.a. Deskfinity)
+        </p>
+    </div>
+</div>
+
+<!-- CV -->
+<div class="section" id="cv">
+    <div class="title">EXPERIENCE</div>
+
+    <div class="grid">
+
+        <div class="block">
+            <h2>Film & Medienpraxis</h2>
+            <ul>
+                <li>Offener Kanal Kiel (2019–2020) – Medien & Produktion</li>
+                <li>Opernhaus Kiel (2023) – Planung & Bühnengestaltung</li>
+                <li>Karl May Festspiele (2022) – Produktion</li>
+                <li>Gymnasium Altenholz – Leitung Filmtage & Projekttage</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h2>Technische Kompetenzen</h2>
+            <ul>
+                <li>Regie, Kamera, Lichtsetzung, Schnitt, Postproduktion</li>
+                <li>DaVinci Resolve · Adobe Premiere Pro · Final Cut Pro</li>
+                <li>Blender (3D / Visualisierung / Filmexperimente)</li>
+                <li>Skriptwriting & kreative Konzeption</li>
+                <li>Kamera- & Lichtsetups eigenständig aufgebaut</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h2>Berufserfahrung</h2>
+            <ul>
+                <li>Schulbegleitung (2026)</li>
+                <li>Weihnachtsmarktverkauf (2025)</li>
+                <li>Spargelstand Verkauf (2025)</li>
+                <li>Leiter Robotik AG (2023–2025)</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h2>Ausbildung</h2>
+            <ul>
+                <li>Abitur – Gymnasium Altenholz (2017–2025)</li>
+                <li>Grundschule Claus-Rixen-Schule (2013–2017)</li>
+            </ul>
+        </div>
+
+    </div>
 </div>
 
 <!-- CONTACT -->
-<div class="section contact" id="contact">
+<div class="section" id="contact">
     <div class="title">CONTACT</div>
-    <p>Email: deinname@email.com</p>
+    <p>
+        <a href="mailto:jonte.willert07@gmail.com">jonte.willert07@gmail.com</a><br/>
+        Altenholz, Deutschland
+    </p>
 </div>
 
 </body>
