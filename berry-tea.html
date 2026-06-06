@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Berry Tea - Jonte Jesper Willert</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -26,6 +27,7 @@ body {
     padding: 20px;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
 .nav a {
@@ -35,7 +37,9 @@ body {
     letter-spacing: 0.2em;
 }
 
-.nav a:hover { color: #fff; }
+.nav a:hover {
+    color: #fff;
+}
 
 /* HERO */
 .hero {
@@ -63,32 +67,48 @@ body {
 
 /* CONTENT */
 .section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 80px 20px;
-    line-height: 1.7;
 }
 
+/* STORY SHOTS */
+.shot {
+    margin-bottom: 70px;
+}
+
+.shot img {
+    width: 100%;
+    border-radius: 6px;
+    opacity: 0.95;
+    transition: 0.4s ease;
+}
+
+.shot img:hover {
+    transform: scale(1.01);
+    opacity: 1;
+}
+
+.shot p {
+    margin-top: 12px;
+    opacity: 0.7;
+    line-height: 1.6;
+    max-width: 750px;
+}
+
+/* TITLES */
 .title {
     font-size: 12px;
     letter-spacing: 0.3em;
     opacity: 0.6;
     margin-bottom: 30px;
 }
-
-.block {
-    margin-bottom: 40px;
-}
-
-.credit {
-    opacity: 0.7;
-    font-size: 0.95rem;
-}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
@@ -97,41 +117,100 @@ body {
     <a href="contact.html">CONTACT</a>
 </div>
 
+<!-- HERO -->
 <div class="hero">
     <h1>BERRY TEA</h1>
-    <p>KURZFILM / CINEMATOGRAPHY STUDY</p>
+    <p>SCIENCE FICTION / CINEMATOGRAPHY STUDY</p>
 </div>
 
+<!-- CONTENT -->
 <div class="section">
 
-    <div class="block">
-        <div class="title">ABOUT</div>
-        <p>
-            „Berry Tea“ ist ein atmosphärischer Kurzfilm mit Fokus auf Lichtsetzung,
-            Farbgestaltung und emotionaler Bildsprache.
-            Der Film untersucht Stimmung durch visuelles Storytelling.
-        </p>
+    <div class="title">FILM STILLS & PROCESS</div>
+
+    <div class="shot">
+        <img src="berrytea1.jpg">
+        <p>Der Film basiert ursprünglich auf dem Konzept der Transposons – “jumping genes”, die genetische Informationen extrem schnell verändern können.</p>
     </div>
 
-    <div class="block">
-        <div class="title">ROLE</div>
-        <p class="credit">
-            Regie · Kamera · Licht · Schnitt · Produktion · Drehbuch
-        </p>
+    <div class="shot">
+        <img src="berrytea2.jpg">
+        <p>Eine wissenschaftliche Mission entwickelt sich langsam zu einem Kontrollverlust über eine unbekannte biologische Entdeckung.</p>
     </div>
 
-    <div class="block">
-        <div class="title">PRODUCTION</div>
-        <p class="credit">
-            Produktionszeitraum: 05.01.2026 – 04.02.2026
-        </p>
+    <div class="shot">
+        <img src="berrytea3.jpg">
+        <p>Der fremde Planet Gamma 7R wurde mit praktischen Effekten und Nebel in einer realen Umgebung inszeniert.</p>
     </div>
 
-    <div class="block">
-        <div class="title">FOCUS</div>
-        <p>
-            Cinematography, Farbkomposition, emotionale Atmosphäre, experimentelles Lichtdesign.
-        </p>
+    <div class="shot">
+        <img src="berrytea4.jpg">
+        <p>Das Kontrollzentrum überwacht den Rover in einer vollständig simulierten digitalen Umgebung.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea5.jpg">
+        <p>Die Entdeckung von Mikroben löst sofort wissenschaftliche Euphorie aus.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea6.jpg">
+        <p>Im Labor verschiebt sich die Atmosphäre von vorsichtiger Forschung zu unkontrollierter Sicherheit.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea7.jpg">
+        <p>Unter dem Mikroskop zeigt sich, dass die Proben fast vollständig aus Transposons bestehen.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea8.jpg">
+        <p>Farb- und Chemieexperimente visualisieren die Instabilität des genetischen Materials.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea9.jpg">
+        <p>Temperatur- und Drucktests zeigen die extreme Reaktivität der Mikroben.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea10.jpg">
+        <p>Ein Experiment führt dazu, dass eine Probe gasförmig wird und eingeatmet wird.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea11.jpg">
+        <p>Die Infektion zeigt sich erstmals durch körperliche Veränderungen.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea12.jpg">
+        <p>Der Tee wird zum zentralen Symbol für Alltag, der mit Gefahr kollidiert.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea13.jpg">
+        <p>Im Meeting wird die Situation offiziell als “unter Kontrolle” erklärt.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea14.jpg">
+        <p>Lichtgestaltung erzeugt Kontrast zwischen Kontrolle und Realität.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea15.jpg">
+        <p>Der kontaminierte Tee wird unwissentlich serviert.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea16.jpg">
+        <p>Die Forschung läuft weiter, obwohl die Gefahr bereits eskaliert ist.</p>
+    </div>
+
+    <div class="shot">
+        <img src="berrytea17.jpg">
+        <p>Das Ende zeigt einen Kreislauf aus wissenschaftlicher Hybris und Wiederholung.</p>
     </div>
 
 </div>
