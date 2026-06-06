@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Berry Tea - Film</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Berry Tea - Jonte Jesper Willert</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -14,12 +15,17 @@ body {
     font-family: Inter;
 }
 
+/* NAV */
 .nav {
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 30px;
+    padding: 20px;
     background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
 }
 
 .nav a {
@@ -31,16 +37,52 @@ body {
 
 .nav a:hover { color: #fff; }
 
-.content {
-    max-width: 800px;
-    margin: 120px auto;
-    padding: 20px;
-    line-height: 1.6;
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #111 0%, #000 70%);
 }
 
-h1 {
+.hero h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.25em;
     font-weight: 300;
+    margin: 0;
+}
+
+.hero p {
+    margin-top: 20px;
+    opacity: 0.5;
     letter-spacing: 0.2em;
+}
+
+/* CONTENT */
+.section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    line-height: 1.7;
+}
+
+.title {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+
+.block {
+    margin-bottom: 40px;
+}
+
+.credit {
+    opacity: 0.7;
+    font-size: 0.95rem;
 }
 </style>
 </head>
@@ -55,15 +97,42 @@ h1 {
     <a href="contact.html">CONTACT</a>
 </div>
 
-<div class="content">
-
+<div class="hero">
     <h1>BERRY TEA</h1>
+    <p>KURZFILM / CINEMATOGRAPHY STUDY</p>
+</div>
 
-    <p>
-        Kurzfilm · Eigenproduktion<br><br>
-        Regie, Kamera, Lichtsetzung, Schnitt, Produktion<br><br>
-        Fokus: Cinematography, Farbe, emotionale Bildsprache.
-    </p>
+<div class="section">
+
+    <div class="block">
+        <div class="title">ABOUT</div>
+        <p>
+            „Berry Tea“ ist ein atmosphärischer Kurzfilm mit Fokus auf Lichtsetzung,
+            Farbgestaltung und emotionaler Bildsprache.
+            Der Film untersucht Stimmung durch visuelles Storytelling.
+        </p>
+    </div>
+
+    <div class="block">
+        <div class="title">ROLE</div>
+        <p class="credit">
+            Regie · Kamera · Licht · Schnitt · Produktion · Drehbuch
+        </p>
+    </div>
+
+    <div class="block">
+        <div class="title">PRODUCTION</div>
+        <p class="credit">
+            Produktionszeitraum: 05.01.2026 – 04.02.2026
+        </p>
+    </div>
+
+    <div class="block">
+        <div class="title">FOCUS</div>
+        <p>
+            Cinematography, Farbkomposition, emotionale Atmosphäre, experimentelles Lichtdesign.
+        </p>
+    </div>
 
 </div>
 
