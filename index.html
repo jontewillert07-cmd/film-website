@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Film Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background: #050505;
+        color: #e6e6e6;
+        font-family: "Inter", sans-serif;
+    }
+
+    /* NAV */
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .nav a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+    }
+
+    .nav a:hover {
+        color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: radial-gradient(circle at center, #111 0%, #000 70%);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: 0.4em;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    .hero p {
+        margin-top: 20px;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        opacity: 0.6;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 120px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        margin-bottom: 40px;
+        opacity: 0.6;
+    }
+
+    /* PROJECTS */
+    .project {
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .project h2 {
+        margin: 0;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+    }
+
+    .project p {
+        opacity: 0.6;
+        line-height: 1.6;
+    }
+
+    .tag {
+        font-size: 11px;
+        opacity: 0.4;
+        margin-top: 8px;
+    }
+
+    /* CONTACT */
+    .contact {
+        text-align: center;
+        opacity: 0.7;
+        font-size: 0.9rem;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJEKTE</a>
+    <a href="#contact">CONTACT</a>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <h1>FILM PORTFOLIO</h1>
+    <p>CINEMATIC STORYTELLING / PRODUCING / DIRECTING</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+    <div class="title">ABOUT</div>
+    <p>
+        Ich bin angehender Filmemacher mit Fokus auf visuelles Storytelling,
+        Produktion und atmosphärische Bildsprache.
+    </p>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+    <div class="title">PROJEKTE</div>
+
+    <div class="project">
+        <h2>BERRY SEA</h2>
+        <div class="tag">SHORT FILM / CONCEPT</div>
+        <p>
+            Ein atmosphärisches Filmprojekt mit Fokus auf Farbe, Stimmung und emotionale Bildsprache.
+        </p>
+    </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section contact" id="contact">
+    <div class="title">CONTACT</div>
+    <p>Email: deinname@email.com</p>
+</div>
+
+</body>
+</html>
