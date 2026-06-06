@@ -12,17 +12,16 @@
         margin: 0;
         background: #050505;
         color: #e6e6e6;
-        font-family: "Inter", sans-serif;
-        overflow-x: hidden;
+        font-family: Inter;
+        overflow: hidden;
     }
 
     .grain {
         position: fixed;
         inset: 0;
         pointer-events: none;
-        opacity: 0.06;
+        opacity: 0.05;
         background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-        z-index: 999;
     }
 
     .nav {
@@ -35,7 +34,6 @@
         padding: 20px;
         background: rgba(0,0,0,0.6);
         backdrop-filter: blur(10px);
-        z-index: 10;
     }
 
     .nav a {
@@ -45,7 +43,9 @@
         letter-spacing: 0.2em;
     }
 
-    .nav a:hover { color: #fff; }
+    .nav a:hover {
+        color: #fff;
+    }
 
     .hero {
         height: 100vh;
@@ -57,65 +57,19 @@
         background: radial-gradient(circle at center, #111 0%, #000 70%);
     }
 
-    .hero h1 {
+    h1 {
         font-size: 2.8rem;
         letter-spacing: 0.25em;
         font-weight: 300;
         margin: 0;
     }
 
-    .hero p {
+    p {
         margin-top: 20px;
-        opacity: 0.6;
+        opacity: 0.5;
         letter-spacing: 0.2em;
         font-size: 0.9rem;
     }
-
-    .section {
-        padding: 120px 20px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .title {
-        font-size: 12px;
-        letter-spacing: 0.3em;
-        margin-bottom: 40px;
-        opacity: 0.6;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .block {
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        padding-bottom: 20px;
-    }
-
-    h2 {
-        font-weight: 400;
-        margin: 0 0 10px 0;
-    }
-
-    p, li {
-        opacity: 0.7;
-        line-height: 1.6;
-        font-size: 0.95rem;
-    }
-
-    ul {
-        padding-left: 18px;
-    }
-
-    .project {
-        margin-bottom: 40px;
-    }
-
-    a { color: #fff; text-decoration: none; }
-
 </style>
 </head>
 
@@ -123,106 +77,16 @@
 
 <div class="grain"></div>
 
-<!-- NAV -->
 <div class="nav">
-    <a href="#about">ABOUT</a>
-    <a href="#projects">PROJEKTE</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">CONTACT</a>
+    <a href="about.html">ABOUT</a>
+    <a href="projects.html">PROJEKTE</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">CONTACT</a>
 </div>
 
-<!-- HERO -->
 <div class="hero">
     <h1>JONTE JESPER WILLERT</h1>
     <p>FILMMAKER / CINEMATOGRAPHY / STORYTELLING</p>
-</div>
-
-<!-- ABOUT -->
-<div class="section" id="about">
-    <div class="title">ABOUT</div>
-    <p>
-        Filmemacher mit Fokus auf visuelles Storytelling, Kameraarbeit, Lichtsetzung und Postproduktion.
-        Arbeiten bewegen sich zwischen narrativem Film, Musikvideo und experimenteller Bildgestaltung.
-    </p>
-</div>
-
-<!-- PROJECTS -->
-<div class="section" id="projects">
-    <div class="title">PROJEKTE</div>
-
-    <div class="project">
-        <h2>BERRY TEA</h2>
-        <p>Kurzfilm · Regie, Kamera, Licht, Schnitt, Produktion</p>
-    </div>
-
-    <div class="project">
-        <h2>HALLUZINATION</h2>
-        <p>Kurzfilm · Regie, Kamera, Schnitt</p>
-    </div>
-
-    <div class="project">
-        <h2>WEITERE ARBEITEN</h2>
-        <p>
-            Werbefilm Gymnasium Altenholz · Musikvideo- & Konzertproduktionen · Start-up Imagevideos (u.a. Deskfinity)
-        </p>
-    </div>
-</div>
-
-<!-- CV -->
-<div class="section" id="cv">
-    <div class="title">EXPERIENCE</div>
-
-    <div class="grid">
-
-        <div class="block">
-            <h2>Film & Medienpraxis</h2>
-            <ul>
-                <li>Offener Kanal Kiel (2019–2020) – Medien & Produktion</li>
-                <li>Opernhaus Kiel (2023) – Planung & Bühnengestaltung</li>
-                <li>Karl May Festspiele (2022) – Produktion</li>
-                <li>Gymnasium Altenholz – Leitung Filmtage & Projekttage</li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Technische Kompetenzen</h2>
-            <ul>
-                <li>Regie, Kamera, Lichtsetzung, Schnitt, Postproduktion</li>
-                <li>DaVinci Resolve · Adobe Premiere Pro · Final Cut Pro</li>
-                <li>Blender (3D / Visualisierung / Filmexperimente)</li>
-                <li>Skriptwriting & kreative Konzeption</li>
-                <li>Kamera- & Lichtsetups eigenständig aufgebaut</li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Berufserfahrung</h2>
-            <ul>
-                <li>Schulbegleitung (2026)</li>
-                <li>Weihnachtsmarktverkauf (2025)</li>
-                <li>Spargelstand Verkauf (2025)</li>
-                <li>Leiter Robotik AG (2023–2025)</li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Ausbildung</h2>
-            <ul>
-                <li>Abitur – Gymnasium Altenholz (2017–2025)</li>
-                <li>Grundschule Claus-Rixen-Schule (2013–2017)</li>
-            </ul>
-        </div>
-
-    </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-    <div class="title">CONTACT</div>
-    <p>
-        <a href="mailto:jonte.willert07@gmail.com">jonte.willert07@gmail.com</a><br/>
-        Altenholz, Deutschland
-    </p>
 </div>
 
 </body>
