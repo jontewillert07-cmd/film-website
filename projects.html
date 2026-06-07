@@ -2,44 +2,181 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Projekte</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Jonte Jesper Willert</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body { margin:0; background:#050505; color:#e6e6e6; font-family:Inter; }
+*{box-sizing:border-box}
 
-.nav {
-    padding:20px;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    background:rgba(0,0,0,0.6);
+body{
+margin:0;
+background:#050505;
+color:#eaeaea;
+font-family:Inter,sans-serif;
+overflow-x:hidden;
 }
 
-.nav a {
-    color:#aaa;
-    text-decoration:none;
-    font-size:12px;
-    letter-spacing:0.2em;
+/* grain */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background-image:radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
+background-size:4px 4px;
+opacity:.03;
+pointer-events:none;
+z-index:9999;
 }
 
-.nav a:hover { color:#fff; }
-
-.content {
-    max-width:900px;
-    margin:120px auto;
-    padding:20px;
+/* nav */
+.nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:center;
+gap:28px;
+padding:18px;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(12px);
+z-index:100;
 }
 
-.project {
-    padding:20px 0;
-    border-bottom:1px solid rgba(255,255,255,0.1);
+.nav a{
+color:#aaa;
+text-decoration:none;
+font-size:11px;
+letter-spacing:.25em;
+}
+.nav a:hover{color:#fff}
+
+/* hero */
+.hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at center,#141414 0%,#000 75%);
 }
 
-.project a {
-    color:#fff;
-    text-decoration:none;
+.hero-title{
+display:flex;
+flex-direction:column;
+line-height:.9;
+}
+
+.hero-title span{
+font-size:clamp(3.5rem,10vw,8rem);
+font-weight:200;
+letter-spacing:.18em;
+opacity:0;
+animation:fadeUp 1.2s ease forwards;
+}
+
+.hero-title span:last-child{
+animation-delay:.2s;
+}
+
+.hero p{
+opacity:.5;
+letter-spacing:.3em;
+margin-top:20px;
+font-size:12px;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* content */
+.content{
+max-width:1200px;
+margin:auto;
+padding:60px 24px;
+}
+
+/* project grid */
+.project{
+margin-bottom:120px;
+}
+
+.project-head{
+margin-bottom:40px;
+}
+
+.project-title{
+font-size:28px;
+letter-spacing:.1em;
+margin:0;
+}
+
+.project-meta{
+font-size:11px;
+letter-spacing:.25em;
+color:#888;
+margin-top:10px;
+}
+
+/* grid */
+.grid{
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:24px;
+}
+
+.shot{
+margin-bottom:40px;
+}
+
+.shot img{
+width:100%;
+display:block;
+border-radius:6px;
+transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .8s;
+filter:brightness(.95) contrast(1.05);
+}
+
+.shot:hover img{
+transform:scale(1.02);
+filter:brightness(1.05);
+}
+
+.shot p{
+font-size:13px;
+line-height:1.6;
+color:#bdbdbd;
+margin-top:10px;
+}
+
+/* full image */
+.full{
+margin:80px 0;
+}
+
+.full img{
+width:100%;
+border-radius:6px;
+}
+
+/* animation */
+.fade{
+animation:fadeIn 1.2s ease both;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* responsive */
+@media(max-width:900px){
+.grid{grid-template-columns:1fr}
+.hero-title span{letter-spacing:.08em}
 }
 </style>
 </head>
@@ -47,21 +184,83 @@ body { margin:0; background:#050505; color:#e6e6e6; font-family:Inter; }
 <body>
 
 <div class="nav">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="projects.html">PROJEKTE</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">CONTACT</a>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="projects.html">PROJECTS</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">CONTACT</a>
 </div>
+
+<section class="hero">
+<div class="hero-title">
+<span>PROJECTS</span>
+<span>ARCHIVE</span>
+</div>
+<p>SELECTED FILM WORKS</p>
+</section>
 
 <div class="content">
 
-    <h1>Projekte</h1>
+<!-- BERRY TEA -->
+<div class="project fade">
 
-    <div class="project">
-        <h2><a href="berry-tea.html">Berry Tea</a></h2>
-        <p>Kurzfilm · Regie, Kamera, Licht, Schnitt</p>
-    </div>
+<div class="project-head">
+<h2 class="project-title">Berry Tea</h2>
+<div class="project-meta">SCI-FI / CINEMATOGRAPHY STUDY · 12:21</div>
+</div>
+
+<div class="grid">
+<div class="shot">
+<img src="berrytea1.png">
+<p>Finale Mutation und Kontrollverlust im Labor.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea5.png">
+<p>Kontrollzentrum mit Echtzeitdaten des Rovers.</p>
+</div>
+</div>
+
+<div class="grid">
+<div class="shot">
+<img src="berrytea10.png">
+<p>Der Wendepunkt: die Freisetzung der Transposonen.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea14.png">
+<p>Das rote Fluid als zentrales Motiv der Kontamination.</p>
+</div>
+</div>
+
+<div class="full">
+<img src="berrytea8.png">
+<p>Die Protagonistin erkennt die Struktur der Infektion.</p>
+</div>
+
+</div>
+
+<!-- PLACEHOLDER FOR NEXT PROJECT -->
+<div class="project fade">
+
+<div class="project-head">
+<h2 class="project-title">Coming Soon</h2>
+<div class="project-meta">SHORT FILM / WORK IN PROGRESS</div>
+</div>
+
+<div class="grid">
+<div class="shot">
+<img src="berrytea3.png">
+<p>Experimentelle Farb- und Lichtstudien.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea6.png">
+<p>Cinematische Laborästhetik in Entwicklung.</p>
+</div>
+</div>
+
+</div>
 
 </div>
 
