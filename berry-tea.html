@@ -4,100 +4,132 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Berry Tea - Jonte Jesper Willert</title>
+<title>Berry Tea - Film Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    background: #050505;
-    color: #e6e6e6;
-    font-family: Inter;
+body{
+    margin:0;
+    background:#050505;
+    color:#eaeaea;
+    font-family:Inter;
 }
 
-.nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    z-index: 10;
+/* NAV */
+.nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    padding:18px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(12px);
+    z-index:10;
+}
+.nav a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:0.25em;
+}
+.nav a:hover{color:#fff}
+
+/* HERO */
+.hero{
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:radial-gradient(circle at center,#151515 0%,#000 75%);
+}
+.hero h1{
+    font-size:3rem;
+    letter-spacing:0.35em;
+    font-weight:300;
+}
+.hero p{
+    opacity:0.5;
+    letter-spacing:0.25em;
+    margin-top:10px;
 }
 
-.nav a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.2em;
+/* META BLOCK */
+.meta{
+    max-width:900px;
+    margin:80px auto 40px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 40px;
+    font-size:12px;
+    letter-spacing:0.08em;
+    opacity:0.75;
+}
+.meta div{line-height:1.6}
+
+/* SECTION */
+.section{
+    max-width:900px;
+    margin:0 auto;
+    padding:60px 20px;
 }
 
-.nav a:hover { color: #fff; }
-
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle at center, #111 0%, #000 70%);
+.title{
+    font-size:11px;
+    letter-spacing:0.35em;
+    opacity:0.5;
+    margin-bottom:50px;
 }
 
-.hero h1 {
-    font-size: 2.8rem;
-    letter-spacing: 0.25em;
-    font-weight: 300;
-    margin: 0;
+/* SHOTS */
+.shot{
+    margin-bottom:90px;
+}
+.shot img{
+    width:100%;
+    border-radius:4px;
+    filter:contrast(1.05) brightness(0.92);
+}
+.shot p{
+    margin-top:14px;
+    font-size:14px;
+    line-height:1.65;
+    opacity:0.72;
+    max-width:780px;
 }
 
-.hero p {
-    margin-top: 20px;
-    opacity: 0.5;
-    letter-spacing: 0.2em;
+/* CREDIT GRID */
+.credits{
+    max-width:900px;
+    margin:0 auto 120px auto;
+    padding:0 20px;
+}
+.credit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px 40px;
+    font-size:12px;
+    opacity:0.75;
+    line-height:1.7;
+}
+.credit-title{
+    margin:80px 0 20px 0;
+    font-size:11px;
+    letter-spacing:0.35em;
+    opacity:0.5;
 }
 
-.section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 20px;
-}
-
-.shot {
-    margin-bottom: 70px;
-}
-
-.shot img {
-    width: 100%;
-    display: block;
-    border-radius: 6px;
-    opacity: 0.95;
-    transition: 0.4s ease;
-    filter: contrast(1.05) brightness(0.95);
-}
-
-.shot img:hover {
-    transform: scale(1.01);
-    opacity: 1;
-    filter: contrast(1.1) brightness(1);
-}
-
-.shot p {
-    margin-top: 12px;
-    opacity: 0.7;
-    line-height: 1.6;
-    max-width: 750px;
-}
-
-.title {
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    opacity: 0.6;
-    margin-bottom: 40px;
+/* subtle divider */
+hr{
+    border:none;
+    height:1px;
+    background:#222;
+    margin:80px 0;
 }
 </style>
 </head>
@@ -105,105 +137,167 @@ body {
 <body>
 
 <div class="nav">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="projects.html">PROJEKTE</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">CONTACT</a>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="projects.html">PROJECTS</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">CONTACT</a>
 </div>
 
 <div class="hero">
     <h1>BERRY TEA</h1>
-    <p>SCIENCE FICTION / CINEMATOGRAPHY STUDY</p>
+    <p>SCIENCE FICTION / CINEMATIC STUDY</p>
 </div>
 
+<!-- META -->
+<div class="meta">
+<div>Produktionszeitraum<br>03.01.2026 – 06.03.2026</div>
+<div>Drehzeitraum<br>10.01.2026 – 18.01.2026</div>
+<div>Genre<br>Science Fiction</div>
+<div>Bild / Kamera / Schnitt<br>Jonte Jesper Willert</div>
+</div>
+
+<!-- SHOTS -->
 <div class="section">
+<div class="title">NARRATIVE STRUCTURE</div>
 
-<div class="title">FILM STILLS & PROCESS</div>
-
+<!-- AKT 1 -->
 <div class="shot">
-<img src="berrytea1.png">
-<p>In der finalen Szene wird durch präzises Color Grading in Kombination mit den weißen Kontaktlinsen die vollständige Mutation von Robert sichtbar gemacht. Die ästhetische Überzeichnung verweist auf die Hybris wissenschaftlicher Kontrolle, die hier endgültig scheitert.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea17.png">
-<p>Gamma 7R erscheint als roter, fremder Planet. Durch rotes Licht, Pyrotechnik und Nebel entsteht eine künstlich verdichtete, außerirdische Atmosphäre, die den Wandel des Systems visuell markiert.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea12.png">
-<p>Die Gruppe der Wissenschaftler steht unmittelbar vor dem kritischen Wendepunkt, ohne die volle Tragweite ihrer Entscheidungen bereits zu erfassen.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea2.png">
-<p>Rebecca Weller reflektiert die Konsequenzen des Experiments. Die Szene zeigt die zunehmende Naivität der Charaktere, während sich die Bedrohung schleichend ausbreitet.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea9.png">
-<p>In Nahaufnahmen wird mit variierenden Lichtsetzungen und Fokus gearbeitet, um die steigende Hektik und innere Instabilität der Situation zu verstärken.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea16.png">
-<p>Der Rover auf Gamma 7R wird durch unsichtbare technische Hilfsmittel bewegt. Der ausfahrbare Arm wurde präzise kontrolliert, um eine glaubhafte Interaktion mit der Umgebung zu erzeugen.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea14.png">
-<p>Die rote Flüssigkeit fungiert als wiederkehrendes visuelles Motiv – ein roter Faden, der die kontinuierlich zunehmende Gefahr innerhalb des Films symbolisiert.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea15.png">
-<p>Der Tee wird unbeabsichtigt zum Träger der Kontamination und markiert damit die unauffällige Ausbreitung der Infektion in den Alltag der Figuren.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea13.png">
-<p>Der Supervisor analysiert die Proben mit Faszination und ist überzeugt, einen wissenschaftlichen Durchbruch erreicht zu haben, ohne die Konsequenzen zu erkennen.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea6.png">
-<p>Die Analyse wird unter stark cinematischer Beleuchtung fortgeführt. Jede Reaktion der Probe wird aufmerksam dokumentiert und interpretiert.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea7.png">
-<p>Durch den Einsatz von Lebensmittelfarbe werden chemische Prozesse sichtbar gemacht und visuell verstärkt.</p>
+<img src="berrytea4.png">
+<p>Der Film ist bewusst dunkel gestaltet, um eine permanente Unsicherheit und wissenschaftliche Kälte zu erzeugen.</p>
 </div>
 
 <div class="shot">
 <img src="berrytea5.png">
-<p>Das Kontrollzentrum visualisiert die Daten des Rovers in Echtzeit und bildet die technologische Schnittstelle zwischen Mission und Beobachtung.</p>
+<p>Im Kontrollzentrum werden Daten des Rovers in Echtzeit analysiert – die technische Kontrolle wirkt noch stabil.</p>
 </div>
 
 <div class="shot">
-<img src="berrytea11.png">
-<p>Ein erhöhter Farbkontrast verstärkt die zunehmende Spannung und visualisiert die eskalierende Bedrohung im Verlauf der Handlung.</p>
+<img src="berrytea2.png">
+<p>Rebecca Weller reflektiert erste Zweifel. Die Naivität des Teams beginnt sichtbar zu werden.</p>
 </div>
 
 <div class="shot">
-<img src="berrytea4.png">
-<p>Der Film ist bewusst dunkel gestaltet, um die atmosphärische Dichte und das Gefühl permanenter Unsicherheit zu verstärken.</p>
+<img src="berrytea12.png">
+<p>Die Forscher stehen kurz vor dem entscheidenden Wendepunkt, ohne die Konsequenzen zu verstehen.</p>
+</div>
+
+<!-- AKT 2 -->
+<div class="shot">
+<img src="berrytea7.png">
+<p>Mit einfachen Mitteln wie Lebensmittelfarbe werden chemische Prozesse sichtbar gemacht.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea6.png">
+<p>Die Analyse eskaliert unter intensiver Lichtsetzung – Kontrolle wird zu Obsession.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea13.png">
+<p>Der Supervisor interpretiert die Ergebnisse als Durchbruch, blind für die Risiken.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea14.png">
+<p>Die rote Flüssigkeit wird zum zentralen Motiv: ein visueller Warncode im gesamten Film.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea15.png">
+<p>Der Tee wird unbemerkt zum Träger der Kontamination.</p>
 </div>
 
 <div class="shot">
 <img src="berrytea3.png">
-<p>Die weißen Kontaktlinsen visualisieren die Auswirkungen der Transposon-Infektion, die Wahrnehmung und Kontrolle der Figuren zunehmend destabilisiert.</p>
+<p>Die weißen Kontaktlinsen visualisieren den Beginn der Transposon-Infektion.</p>
 </div>
 
+<!-- AKT 3 -->
 <div class="shot">
 <img src="berrytea10.png">
-<p>Am Wendepunkt des Films wird durch Erhitzung der Probe mit einem Bunsenbrenner die Freisetzung der Transposons ausgelöst. Die Infektion beginnt sich erstmals direkt auf Menschen auszubreiten.</p>
+<p>Der Wendepunkt: Hitze setzt die Transposons frei – die Infektion wird real und unkontrollierbar.</p>
 </div>
 
 <div class="shot">
 <img src="berrytea8.png">
-<p>Die Protagonistin versucht verzweifelt, ihre Notizen zu analysieren und die Zusammenhänge zu entschlüsseln, während die Bedrohung immer näher rückt.</p>
+<p>Die Protagonistin versucht, die Zusammenhänge zu rekonstruieren, während die Situation kollabiert.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea11.png">
+<p>Kontraststeigerung verstärkt die eskalierende Bedrohung.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea16.png">
+<p>Der Rover wird praktisch animiert – Kontrolle über das System bricht endgültig zusammen.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea17.png">
+<p>Gamma 7R erscheint als fremder roter Planet – das System ist nicht mehr rückholbar.</p>
+</div>
+
+<div class="shot">
+<img src="berrytea1.png">
+<p>Finale Mutation: wissenschaftliche Hybris endet in biologischer Transformation.</p>
+</div>
+
+</div>
+
+<hr>
+
+<!-- CREDITS -->
+<div class="credits">
+
+<div class="title">CREDITS</div>
+
+<div class="credit-title">CAST / CHARACTERS</div>
+<div class="credit-grid">
+<div>Tea Lady - Jytte Jesine Willert</div>
+<div>Dr. Connor - Rebecca Weller</div>
+<div>Dr. Roberts - Linnea Omlin</div>
+<div>Dr. McCaffrey - Matthias Behrens</div>
+<div>Dr. Brando - Kjell Schweder</div>
+<div>Dr. Preston - Nicolai Abshagen</div>
+<div>Dr. Mallark - Dieter Glanz</div>
+<div>Dr. Schroeter - Jule Schroeter</div>
+<div>Dr. Higgins - Lorenz Abshagen</div>
+<div>Dr. Lindgren - Göran Svante Willert</div>
+<div>Dr. Standford - Niklas Kraus</div>
+<div>Dr. Malcolm - Lars Willert</div>
+<div>Dr. Nolan - Ann-Christin Urbarz</div>
+<div>Dr. Charles - Birgit Schroeter</div>
+<div>Dr. Meyer - Hans Joachim Sprenger</div>
+<div>Dr. McCaffrey - Ida Blinn</div>
+<div>Dr. Kaosmæki - Domenique Feucht</div>
+<div>Dr. Darwik - Yvonne Willert-Sprenger</div>
+<div>Dr. Abston - Ben Albrecht</div>
+<div>Dr. Miller - Barbara Sprenger</div>
+<div>Dr. Skarkov - Reinhild Glanz</div>
+<div>Dr. Michigan - Georg Schroeter</div>
+<div>Evacuation Officer - Jonte Willert</div>
+<div>Evacuation Officer - Anastasia Krämer</div>
+<div>Dr. Fischer - Jonte Jesper Willert</div>
+</div>
+
+<div class="credit-title">PRODUCTION</div>
+<div class="credit-grid">
+<div>Cinematography - Jonte Jesper Willert</div>
+<div>Director - Jonte Jesper Willert</div>
+<div>Screenplay - Jonte Jesper Willert</div>
+<div>Editing - Jonte Jesper Willert</div>
+<div>Script Supervisor - Linnea Omlin</div>
+<div>Producer - Jonte Jesper Willert</div>
+<div>Wardrobe - Linnea Omlin</div>
+<div>Production Assistance - Linnea Omlin</div>
+</div>
+
+<div class="credit-title">SOUND</div>
+<div class="credit-grid">
+<div>Sound Effects - DJI Mic 2</div>
+<div>Music - Pixabay / Ronald Kah</div>
 </div>
 
 </div>
