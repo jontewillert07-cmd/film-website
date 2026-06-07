@@ -77,9 +77,7 @@ opacity:0;
 animation:fadeUp 1.2s ease forwards;
 }
 
-.hero-title span:last-child{
-animation-delay:.2s;
-}
+.hero-title span:last-child{animation-delay:.2s;}
 
 .hero p{
 opacity:.5;
@@ -100,84 +98,83 @@ margin:auto;
 padding:60px 24px;
 }
 
-/* project grid */
+/* project cards */
 .project{
-margin-bottom:120px;
+position:relative;
+margin-bottom:140px;
+height:420px;
+display:flex;
+align-items:flex-end;
+overflow:hidden;
+border-radius:8px;
+cursor:pointer;
+text-decoration:none;
 }
 
-.project-head{
-margin-bottom:40px;
+/* background image layer */
+.project-bg{
+position:absolute;
+inset:0;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:0;
+}
+
+.project-bg img{
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0.22;
+filter:brightness(.7) contrast(1.1);
+transform:scale(1.05);
+transition:transform 1s ease, opacity 1s ease;
+}
+
+.project:hover .project-bg img{
+opacity:0.35;
+transform:scale(1.08);
+}
+
+/* dark overlay */
+.project::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.2));
+}
+
+/* text */
+.project-info{
+position:relative;
+z-index:2;
+padding:40px;
 }
 
 .project-title{
-font-size:28px;
-letter-spacing:.1em;
+font-size:34px;
+letter-spacing:.12em;
 margin:0;
+color:#fff;
 }
 
 .project-meta{
 font-size:11px;
 letter-spacing:.25em;
-color:#888;
+color:#aaa;
 margin-top:10px;
 }
 
-/* grid */
-.grid{
-display:grid;
-grid-template-columns:1.5fr 1fr;
-gap:24px;
+.project-link{
+display:inline-block;
+margin-top:18px;
+font-size:11px;
+letter-spacing:.3em;
+color:#fff;
+opacity:.7;
 }
 
-.shot{
-margin-bottom:40px;
-}
+.project-link:hover{opacity:1}
 
-.shot img{
-width:100%;
-display:block;
-border-radius:6px;
-transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .8s;
-filter:brightness(.95) contrast(1.05);
-}
-
-.shot:hover img{
-transform:scale(1.02);
-filter:brightness(1.05);
-}
-
-.shot p{
-font-size:13px;
-line-height:1.6;
-color:#bdbdbd;
-margin-top:10px;
-}
-
-/* full image */
-.full{
-margin:80px 0;
-}
-
-.full img{
-width:100%;
-border-radius:6px;
-}
-
-/* animation */
-.fade{
-animation:fadeIn 1.2s ease both;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-/* responsive */
-@media(max-width:900px){
-.grid{grid-template-columns:1fr}
-.hero-title span{letter-spacing:.08em}
-}
 </style>
 </head>
 
@@ -201,66 +198,37 @@ to{opacity:1;transform:translateY(0)}
 
 <div class="content">
 
-<!-- BERRY TEA -->
-<div class="project fade">
+<!-- BERRY TEA (CLICKABLE FIXED) -->
+<a href="berry-tea.html" class="project">
 
-<div class="project-head">
+<div class="project-bg">
+<img src="berrytea10.png">
+<img src="berrytea5.png">
+</div>
+
+<div class="project-info">
 <h2 class="project-title">Berry Tea</h2>
 <div class="project-meta">SCI-FI / CINEMATOGRAPHY STUDY · 12:21</div>
+<div class="project-link">OPEN PROJECT →</div>
 </div>
 
-<div class="grid">
-<div class="shot">
-<img src="berrytea1.png">
-<p>Finale Mutation und Kontrollverlust im Labor.</p>
-</div>
+</a>
 
-<div class="shot">
-<img src="berrytea5.png">
-<p>Kontrollzentrum mit Echtzeitdaten des Rovers.</p>
-</div>
-</div>
+<!-- SECOND PROJECT (PLACEHOLDER) -->
+<a href="#" class="project">
 
-<div class="grid">
-<div class="shot">
-<img src="berrytea10.png">
-<p>Der Wendepunkt: die Freisetzung der Transposonen.</p>
-</div>
-
-<div class="shot">
+<div class="project-bg">
+<img src="berrytea3.png">
 <img src="berrytea14.png">
-<p>Das rote Fluid als zentrales Motiv der Kontamination.</p>
-</div>
 </div>
 
-<div class="full">
-<img src="berrytea8.png">
-<p>Die Protagonistin erkennt die Struktur der Infektion.</p>
-</div>
-
-</div>
-
-<!-- PLACEHOLDER FOR NEXT PROJECT -->
-<div class="project fade">
-
-<div class="project-head">
+<div class="project-info">
 <h2 class="project-title">Coming Soon</h2>
 <div class="project-meta">SHORT FILM / WORK IN PROGRESS</div>
+<div class="project-link">VIEW DETAILS →</div>
 </div>
 
-<div class="grid">
-<div class="shot">
-<img src="berrytea3.png">
-<p>Experimentelle Farb- und Lichtstudien.</p>
-</div>
-
-<div class="shot">
-<img src="berrytea6.png">
-<p>Cinematische Laborästhetik in Entwicklung.</p>
-</div>
-</div>
-
-</div>
+</a>
 
 </div>
 
